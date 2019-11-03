@@ -31,8 +31,7 @@ public class UserResource {
     public ResponseEntity getSingleUser(@PathVariable Long userId) {
         LOGGER.info("$$$ Getting single user");
         final Optional<User> singleUser = userService.getSingleUser(userId);
-        final User user = singleUser.orElse(null);
-        if(null == user) {
+        if(!singleUser.isPresent()) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok(singleUser.get());

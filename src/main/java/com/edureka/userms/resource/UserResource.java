@@ -21,6 +21,13 @@ public class UserResource {
         this.userService = userService;
     }
 
+    
+    @GetMapping("/status")
+    public String status() {
+        LOGGER.info("$$$ Status check ");
+        return "All Good";
+    }
+    
     @GetMapping("/users")
     public ResponseEntity getAllUsers() {
         LOGGER.info("$$$ Getting all users");

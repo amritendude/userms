@@ -1,5 +1,5 @@
 node{
   stage('Build'){
-   sh 'echo $PATH'
+   sh 'which mvn'
   }
 }

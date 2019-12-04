@@ -1,5 +1,16 @@
+
 node{
+
   stage('Build'){
-   sh 'which mvn'
+
+   sh 'mvn clean package'
+
   }
+
+  stage('Sonar'){
+
+   sh 'mvn sonar:sonar'
+
+  }
+
 }

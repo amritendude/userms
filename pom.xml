@@ -73,11 +73,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-    				<groupId>org.codehaus.mojo</groupId>
-    				<artifactId>sonar-maven-plugin</artifactId>
-    				<version>4.5.7</version>
-			</plugin>
 		</plugins>
 	</build>
 </project>
